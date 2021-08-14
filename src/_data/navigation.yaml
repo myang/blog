@@ -1,10 +1,10 @@
 ---
 items:
-  - text: Menu One
+  - text: TinyML
     url: "#"
-  - text: Menu Two
+  - text: Block Chain
     url: "#"
-  - text: Menu Three
+  - text: Rust/Swift
     url: "#"
   - text: Blog
     url: "/blog"
