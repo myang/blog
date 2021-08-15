@@ -4,7 +4,6 @@ backend:
   branch: master
   
 publish_mode: editorial_workflow
-show_preview_links: true
   
   ### enable below lines for github integration ###
   # name: github
