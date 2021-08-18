@@ -12,7 +12,7 @@ tags:
 
 为什么有人喜欢冒险(adventure)？
 
-周末看了Netflix的纪录片Kapp to Cap，被深深打动。故事讲的是2013年Reza和Steven辞去在伦敦的Finance Analyst工作，用102天骑行一万八千公里，从欧洲大陆最北角Kapp到非洲最南端开普敦，克服沿途各种困难，完成这一壮举。
+周末看了Netflix的纪录片[Kapp to Cape](https://www.netflix.com/fi-en/title/81411194)，被深深打动。故事讲的是2013年[Reza](https://www.rezapakravan.com/adventures-kapp-to-cape)和Steven辞去在伦敦的Finance Analyst工作，用102天骑行一万八千公里，从欧洲大陆最北角Kapp到非洲最南端开普敦，克服沿途各种困难，完成这一壮举。
 
 ![](/static/img/kapp-cap.gif)
 
@@ -21,3 +21,5 @@ tags:
 ![](/static/img/kapp-cape-map.gif)
 
 在离终点仅有两千多公里的赞比亚，Reza因为严重的食物中毒病倒了。等他恢复重新上路，时间仅剩不到8天。在连续两天每天骑行250多公里后，极差的路况和身体状况使得他们意识到，100天到达终点已不可能。最终他们用了102天完成了壮举，创造了当时最快骑完Kapp到Cape的世界记录。
+
+旅程结束后，Steven又找到一份大公司的工作，回到他从前的生活。而Reza明白他再也回不去了，因为他已经找到了人生新的方向：去继续探险，不断超越自己。他成立了自己的媒体公司，通过制作出售每次旅程的书籍视频演讲及版权，一方面筹措下一次探险的经费，一方面持续[赞助](https://www.rezapakravan.com/charity)一家非洲的慈善机构在当地建学校。
