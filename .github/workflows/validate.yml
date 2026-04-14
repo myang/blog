@@ -22,10 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-          cache: "npm"
+        # Note: no `cache: "npm"` because this repo gitignores package-lock.json.
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm install
 
       - name: Validate post frontmatter
         run: npm run test:posts
