@@ -8,8 +8,8 @@
     "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
     "test": "npm run test:posts && npm run test:markdown && npm run build && npm run test:html && npm run test:build",
     "test:posts": "node tests/validate-posts.js",
-    "test:markdown": "markdownlint-cli2",
-    "test:markdown:fix": "markdownlint-cli2 --fix",
+    "test:markdown": "markdownlint-cli2 \"src/posts/**/*.md\" \"src/blog/**/*.md\"",
+    "test:markdown:fix": "markdownlint-cli2 --fix \"src/posts/**/*.md\" \"src/blog/**/*.md\"",
     "test:html": "html-validate '_site/**/*.html'",
     "test:build": "node tests/validate-build.js"
   },
