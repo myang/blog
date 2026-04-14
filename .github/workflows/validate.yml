@@ -1,0 +1,44 @@
+name: Validate Blog
+
+# CI backstop for the harness. The local Claude Code hooks should already
+# have caught any failures, but this job runs the same pipeline on every
+# push and pull request so nothing slips through.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # markdownlint-cli2 and markdownlint require Node >= 20.
+          node-version: "20"
+        # Note: no `cache: "npm"` because this repo gitignores package-lock.json.
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate post frontmatter
+        run: npm run test:posts
+
+      - name: Lint markdown
+        run: npm run test:markdown
+
+      - name: Build site
+        run: npm run build
+
+      - name: Validate built HTML
+        run: npm run test:html
+
+      - name: Validate build output
+        run: npm run test:build

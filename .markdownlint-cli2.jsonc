@@ -1,0 +1,32 @@
+{
+  // Markdown lint for blog posts.
+  // Intentionally permissive: tuned for bilingual (EN/CN) prose content.
+  // Strict frontmatter validation is handled by tests/validate-posts.js instead.
+  "config": {
+    "default": true,
+    // --- Disabled: too strict for free-form prose content ---
+    "MD013": false, // Line length (CJK + long links)
+    "MD034": false, // Bare URLs (used in several posts)
+    "MD033": false, // Inline HTML
+    "MD041": false, // First line as heading (frontmatter is first)
+    "MD029": false, // Ordered list numbering style
+    "MD032": false, // Blank lines around lists
+    "MD045": false, // Alt text (handled by html-validate on built output)
+    "MD012": false, // Multiple blank lines
+    "MD025": false, // Single top-level heading
+    "MD024": { "siblings_only": true },
+    // --- Enabled: real problems we want to catch ---
+    "MD009": true, // Trailing spaces
+    "MD010": true, // Hard tabs
+    "MD011": true, // Reversed link syntax
+    "MD042": true  // No empty links
+  },
+  "globs": [
+    "src/posts/**/*.md",
+    "src/blog/**/*.md"
+  ],
+  "ignores": [
+    "node_modules/**",
+    "_site/**"
+  ]
+}

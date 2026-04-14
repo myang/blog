@@ -5,7 +5,13 @@
     "debug": "set DEBUG=* & eleventy",
     "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css",
-    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
+    "test": "npm run test:posts && npm run test:markdown && npm run build && npm run test:html && npm run test:build",
+    "test:posts": "node tests/validate-posts.js",
+    "test:markdown": "markdownlint-cli2 \"src/posts/**/*.md\" \"src/blog/**/*.md\"",
+    "test:markdown:fix": "markdownlint-cli2 --fix \"src/posts/**/*.md\" \"src/blog/**/*.md\"",
+    "test:html": "html-validate '_site/**/*.html'",
+    "test:build": "node tests/validate-build.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -16,8 +22,10 @@
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
+    "html-validate": "^10.11.3",
     "js-yaml": "^3.14.0",
     "luxon": "^1.25.0",
+    "markdownlint-cli2": "^0.22.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
     "prismjs": "^1.21.0",
